@@ -53,8 +53,8 @@ def delete_temp_folder(path):
 def main():
     load_dotenv()
 
-    tg_token = os.getenv('TGBOT_TOKEN')
-    tg_chat_id = os.getenv('TG_CHAT_ID')
+    tg_token = os.environ['TGBOT_TOKEN']
+    tg_chat_id = os.environ['TG_CHAT_ID']
 
     temp_folder = 'comics'
     os.makedirs(temp_folder, exist_ok=True)
