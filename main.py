@@ -70,7 +70,6 @@ def main():
         target_image_url = comic_details['img']
         comic_description = comic_details.get('alt', '')
 
-        # получаем расширение файла из URL (.png, .jpg, .gif)
         parsed_url = urlparse(target_image_url)
         _, file_extension = os.path.splitext(parsed_url.path)
         local_image_path = os.path.join(temp_folder, f'{random_comic_id}{file_extension}')
